@@ -1,0 +1,27 @@
+<!--index.wxml-->
+<!-- <view class='container'> -->
+<!-- search  -->
+    <import src="../common/search.wxml" />
+    <template is="search"></template>
+<!-- slider -->
+    <swiper class='banner' autoplay='true'>
+        <block  wx:for="{{bannerData}}"  wx:key="{{index}}">
+        <swiper-item><image class='banner-img' mode="aspectFit" src='{{item.url}}'></image></swiper-item>
+        </block>
+    </swiper>
+<!-- floor -->
+    <view class='floor' wx:for="{{shopList}}" wx:for-item="list" wx:for-index="index" wx:key="{{index}}">
+        <view class='floor-top'>
+            <text class='title'>{{list.topTitle}}</text>
+            <text class='floor-num'>{{index+1}}F</text>
+        </view>
+         <view class='floor-ul'>
+             <view class='floor-li' wx:for="{{list.item}}" wx:for-item="son" data-item="{{son}}" bindtap='shopDetail' wx:key="{{son.id}}">
+                <view class='floor-li-img'><image class='floor-li-img-img' mode='aspectFit' src='{{son.url}}'></image></view>
+                <view class='shop-name'>{{son.title}}</view>
+                <view class='shop-price'>￥{{son.price}}</view>
+            </view> 
+        </view> 
+    </view>
+<!-- </view> -->
+ 

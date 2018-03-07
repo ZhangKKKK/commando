@@ -1,0 +1,24 @@
+<!--pages/category/category.wxml-->
+<import src="../common/search.wxml"/>
+<template is="search"></template>
+<view class='tab'>
+    <view class="tab-list {{tabIndex== 0? 'active' : ''}}" data-index='0' bindtap='changeIndex'>精选</view>
+    <view class="tab-list {{tabIndex== 1? 'active' : ''}}" data-index='1' bindtap='changeIndex'>水果</view>
+    <view class="tab-list {{tabIndex== 2? 'active' : ''}}" data-index='2' bindtap='changeIndex'>饮品</view>
+    <view class="tab-list {{tabIndex== 3? 'active' : ''}}" data-index='3' bindtap='changeIndex'>小吃</view>
+</view>
+<!-- <view class="tab-content {{tabIndex== 0? 'show' : 'hide'}}"> -->
+    <view class="tab-con-list" wx:for="{{c_shopList}}" wx:key="{{index}}" wx:if="{{item.type==tabIndex}}" >
+        <view class="img"><image class='imgsrc' mode="aspectFill" src='{{item.url}}'></image></view>
+        <view class='info'>
+            <view class='info-left'>
+                <view class="name">{{item.name}}</view>
+                <view class="price">￥{{item.price}}</view>
+            </view>
+            <view class='info-right' data-item="{{item}}" bindtap='addShopCart'><image class="shopCart" src='../../images/tabIcon/cart_9.png'></image></view>
+        </view>
+    </view>
+<!-- </view> -->
+<!-- <view class="tab-content {{tabIndex== 1? 'show' : 'hide'}}">1</view>
+<view class="tab-content {{tabIndex== 2? 'show' : 'hide'}}">2</view>
+<view class="tab-content {{tabIndex== 3? 'show' : 'hide'}}">3</view> -->

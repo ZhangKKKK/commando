@@ -1,0 +1,25 @@
+<!--pages/allOrder/allOrder.wxml-->
+<view class='head-title'>全部订单</view>
+<block  wx:if="{{orderList.length>0}}">
+    <view class='shopInfo' wx:for="{{orderList}}" wx:key='{{index}}'>
+        <view class='shop'>
+            <text class='shopname'>邻家小店</text>
+            <text class='contact iconfont icon-del'></text>
+            <text class=' contact' bindtap='cancal' data-index='{{index}}'>取消订单</text>        
+        </view>
+        <view class='info'>
+            <image class='img' src='{{item.url}}'></image>
+            <view class="title">{{item.title}}</view>
+            <view class="price">
+                <view class='delete'>￥{{item.price+8}}</view>
+                <view>￥{{item.price}}</view>
+            </view>
+        </view>
+        <!-- 店铺总价 -->
+        <view class='total'>
+            <text>店铺合计：</text>
+            <text>￥{{item.price}}</text>
+        </view>
+    </view>
+</block>
+<block wx:else><view class='sky' bindtap='goIndex'>您还没有订单，快去挑选喜欢的商品吧</view></block>

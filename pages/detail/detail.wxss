@@ -1,0 +1,117 @@
+/* pages/detail/detail.wxss */
+.swiper{
+    width: 100%;
+    height: 400rpx;
+}
+.banner{
+    width: 100%;
+    height: 100%;
+}
+
+.shopInfo{
+    width: 100%;
+    height: 240rpx;
+    font-size: 18px;
+    color: #333;
+    padding-left: 30rpx;
+    box-sizing: border-box;
+}
+.shopInfo .title{
+    height: 60rpx;
+    line-height: 60rpx;
+    font-size: 14px;
+}
+.token{
+    color: red;
+    font-size: 12px;
+}
+.shopInfo .price{
+    height: 60rpx;
+    line-height: 60rpx;
+}
+.now{
+    font-weight: bold;
+    margin-right: 40rpx;
+}
+.delete{
+    text-decoration: line-through;
+    color: #aaa;
+    font-size: 10px;
+    line-height: 80rpx;
+}
+.myf{
+    margin: 20rpx 0 10rpx 0;
+    font-size: 12px;
+    color: #aaa;
+}
+
+
+/* 评论 */
+.pinlun{
+    width: 100%;
+    height: auto;
+    padding: 20rpx;
+    box-sizing: border-box;
+    border-top: 1px solid #ccc;
+}
+.pl-title{
+    font-size: 12px;
+    color: #aaa;
+}
+.pl-list{
+    width: 100%;
+    height: 200rpx;
+    padding: 20rpx 0;
+    box-sizing: border-box;
+}
+.pl-userinfo{
+    height: 80rpx;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.pl-img{
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+    margin-right: 20rpx;
+}
+.pl-username{
+    color: #aaa;
+    font-size: 12px;
+}
+.pl-con{
+    width: 100%;
+    height: 100rpx;
+    line-height: 50rpx;
+    color: #333;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+}
+/* 加入购物车 */
+.addCarts{
+    width: 100%;
+    height: 100rpx;
+    background: #26a2ff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+.addCarts .button{
+    float: left;
+    width: 50%;
+    height: 100%;
+    line-height: 100rpx;
+    font-size: 14px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.addCarts .button .imgIcon{
+    width: 80rpx;
+    height: 80rpx;
+}

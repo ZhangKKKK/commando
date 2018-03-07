@@ -1,0 +1,18 @@
+<!--pages/address/address.wxml-->
+<form bindsubmit="save" bindreset="reset" class='form'>
+    <view class='list'>
+        <text class='title'>收货人</text>
+        <input class='info' name="name"></input>
+    </view>
+    <view class='list'>
+        <text class='title'>手机号</text>
+        <input class='info' type='number' bindblur="phone" name="phone"></input>
+    </view>
+    <view class='list'>
+        <text class='title'>地址</text>
+        <input class='info' name="address"></input>
+    </view>
+
+
+    <button form-type='submit' type="primary" class='save'>保存</button>
+</form>

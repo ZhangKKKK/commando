@@ -1,0 +1,41 @@
+<!--pages/order/order.wxml-->
+<view class='container'>
+    <view class='flower'><image class='img' src='../../images/tabIcon/order_03.png'></image></view>
+    <view wx:if="{{!address}}" class='writeAddress' bindtap='writeAddress'>
+        <view><text class='iconfont icon-address'></text>    请填写收货地址</view>
+        <view class='iconfont icon-next-m'></view>
+    </view>
+    <view wx:else class='address-info'>
+        <view class='iconfont icon-address token'></view>
+        <view class='add-ress'>
+            <view class='peopel'>收货人：<text class='add-ress-con'>{{adderssInfo.name}}</text></view>
+            <view class='moreAddress'>收货地址： <text class='add-ress-con'>{{adderssInfo.address}}</text></view>
+        </view>
+    </view>
+
+    <view class='shopInfo' wx:for="{{orderData}}" wx:key='{{index}}'>
+        <view class='shop'>
+            <text class='shopname'>邻家小店</text>
+            <text class='contact'>联系商家</text>
+            <text class='iconfont contact contact-img icon-mess'></text>        
+        </view>
+        <view class='info'>
+            <image class='img' src='{{item.url}}'></image>
+            <view class="title">{{item.title}}</view>
+            <view class="price">
+                <view class='delete'>￥{{item.price+8}}</view>
+                <view>￥{{item.price}}</view>
+            </view>
+        </view>
+        <!-- 店铺总价 -->
+        <view class='total'>
+            <text>店铺合计：</text>
+            <text>￥{{item.price}}</text>
+        </view>
+    </view>
+
+    <view class='submit'>
+        <view class='total-price'>总价：<text class='sub-price'>￥{{total}}</text><text class='sub-r'>共{{orderData.length}}件商品</text></view>
+        <view class='subOrder' bindtap='subOrder'>提交订单</view>
+    </view>
+</view>

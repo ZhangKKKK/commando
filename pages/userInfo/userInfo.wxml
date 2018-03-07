@@ -1,0 +1,17 @@
+<!--pages/userInfo/userInfo.wxml-->
+<view class='container'>
+    <view class='userInfo'>
+        <image wx:if="{{!userInfo.avatarUrl}}" mode="aspectFit" class='headImg noLogin' src='../../images/tabIcon/noLogin.png'></image>
+        <image wx:else class='headImg' src='{{userInfo.avatarUrl}}'></image>
+        <view class='nickName'><text>{{userInfo.nickName}}</text></view>
+    </view>
+    <view class='myOrder' bindtap='goOrder'>
+        <text>我的订单</text>
+        <image class="next" src='../../images/tabIcon/next.png'></image>
+    </view>
+    <view class='myOrder' bindtap='clear'>
+        <text>清除缓存</text>
+        <image class="next" src='../../images/tabIcon/next.png'></image>
+    </view>
+</view>
+

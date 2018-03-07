@@ -1,0 +1,23 @@
+<!--pages/shopCart/shopCart.wxml-->
+<block  wx:if="{{shopCarts.length}}">
+    <view class="shop-carts-list" wx:for="{{shopCarts}}" wx:key="{{index}}">
+        <view class="img"><image class="img" mode="aspectFill" src='{{item.url}}'></image></view>
+        <view class="info">
+            <view class='name'>{{item.name}}</view>
+            <view class='price'>￥{{item.price}}</view>
+        </view>
+        <view class='shop-number'>
+            <view class="button" bindtap='add' data-index="{{index}}">+</view> <input class='number' type='number' bindconfirm="shopNumber" value="{{item.number ? item.number : 1}}"></input> <view class="button" bindtap='cancal' data-index="{{index}}">-</view>
+        </view>
+        <view class='delete'>
+            <image data-index="{{index}}" bindtap='delete' class='delete-img' src='../../images/tabIcon/Delete.png'></image>
+        </view>
+    </view>
+    <view class='submit'>
+        <view class='total-price'>总价：<text class='sub-price'>￥{{total}}</text><text class='sub-r'>共{{shopCarts.length}}件商品</text></view>
+        <view class='subOrder' bindtap='subOrder'>提交订单</view>
+    </view>
+</block>
+<block wx:else>
+    <view style='color:#999;padding:20rpx;box-sizing:border-box;'>购物车中空空如也</view>
+</block>

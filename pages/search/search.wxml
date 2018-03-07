@@ -1,0 +1,28 @@
+<!--pages/search/search.wxml-->
+<view class='search-search'>
+    <input class='input' bindblur='searchVal'></input>
+    <text class='text' bindtap='clickSearch'>搜索</text>
+</view>
+<view class='history'>
+    <view class='his-top'><text class='his-title'>历史搜索</text><text class='his-clear' bindtap='clearHistory'>清除</text></view>
+    <!-- wx:for="{{history}}" wx:key="{{index}}" -->
+    <view class='history-list' wx:for="{{historyList}}" wx:key="{{index}}" bindtap='search' data-item='{{item}}'>{{item}}</view>
+</view>
+
+
+<view class='history'>
+    <view class='his-top'><text class='his-title'>热门搜索</text><text class='his-clear'>换一换</text></view>
+    <!-- wx:for="{{history}}" wx:key="{{index}}" -->
+    <view class='history-list'>芬达</view>
+    <view class='history-list'>卷纸</view>
+    <view class='history-list'>垃圾袋</view>
+    <view class='history-list'>口水娃</view>
+</view>
+
+<view class='floor-ul'>
+             <view class='floor-li' wx:for="{{shopList}}" wx:for-item="son" data-item="{{son}}" wx:key="{{son.id}}">
+                <view class='floor-li-img'><image class='floor-li-img-img' mode='aspectFit' src='{{son.url}}'></image></view>
+                <view class='shop-name'>{{son.name}}</view>
+                <view class='shop-price'>￥{{son.price}}</view>
+            </view> 
+        </view> 

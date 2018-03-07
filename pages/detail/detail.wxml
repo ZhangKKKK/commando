@@ -1,0 +1,36 @@
+<!--pages/detail/detail.wxml-->
+<view class='container'>
+    <swiper autoplay class="swiper" indicator-dots="true">
+        <swiper-item><image mode="aspectFit" class='banner' src="{{shopInfo.url}}"></image></swiper-item>
+        <swiper-item><image mode="aspectFit" class='banner' src="{{shopInfo.url}}"></image></swiper-item>
+        <swiper-item><image mode="aspectFit" class='banner' src="{{shopInfo.url}}"></image></swiper-item>
+    </swiper>
+
+    <view class='shopInfo'>
+        <view class='title'>{{shopInfo.title}}</view>
+        <view class='token'>酸甜好滋味  酥松香脆</view>
+        <view class='price'>
+            <text class="now">￥{{shopInfo.price}}</text>
+            <text class='delete'>￥13</text>
+        </view>
+        <view class='myf'>免邮费</view>    
+    </view>
+
+    <!-- 用户评价 -->
+    <view class='pinlun'>
+        <view class="pl-title">买家评价 1 | 销量 66</view>
+        <view class="pl-list">
+            <view class='pl-userinfo'>
+                <image class='pl-img' src='../../images/tabIcon/ren2.png'></image>
+                <text class='pl-username'>123123123</text>
+            </view>
+            <view class='pl-con'>卡福建阿老师看到考虑到积分大姐夫拉屎的 都快放假框架发送到开了房加速度福建阿老师看到考虑到积分大姐夫拉屎的 都快放假框架发送到开了房加速度福建阿老师看到考虑到积分大姐夫拉屎的 都快放假框架发送到开了房加速度</view>
+         </view>
+    </view>
+
+    <!-- 加入购物车 -->
+    <view class="addCarts">
+        <view class='button' bindtap='addCarts'><image class='imgIcon' src='../../images/tabIcon/bot_shopcart_s.png'></image>加入购物车</view>
+        <view class='button' bindtap='buy'>立即购买</view>
+    </view>
+</view>

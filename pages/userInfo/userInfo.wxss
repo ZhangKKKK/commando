@@ -1,0 +1,57 @@
+/* pages/userInfo/userInfo.wxss */
+page{
+    height: 100%;
+}
+.container{
+    background: #f8f8f8;    
+    width: 100%;
+    height: 100%;
+}
+.userInfo{
+    width: 100%;
+    height: 400rpx;
+    background: #26a2ff;
+    text-align: center;
+    padding-top:68rpx;
+    box-sizing:border-box;
+    border-top: 1px solid #f8f8f8;
+}
+.headImg{
+    width: 160rpx;
+    height: 160rpx;
+    border-radius: 50%;
+}
+.nickName{
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    margin-top: 10rpx;
+}
+.noLogin{
+    background: #fff;
+}
+
+
+.myOrder{
+    height: 80rpx;
+    width: 100%;
+    line-height: 80rpx;
+    padding: 0 20rpx;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    background-color: #fff;
+    margin: 30rpx 0;
+}
+.next{
+    width: 60rpx;
+    height: 60rpx;
+}
+
+.animition{
+    width: 100rpx;
+    height: 100rpx;
+    background: #26a2ff;
+}

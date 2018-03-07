@@ -1,0 +1,77 @@
+/* pages/category/category.wxss */
+.tab{
+    width: 100%;
+    height: auto;
+    padding: 24rpx;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-top: 60rpx;
+}
+.tab-list{
+    float: left;
+    width: auto;
+    height: 60rpx;
+    line-height: 60rpx;
+    padding: 0 40rpx;
+    border-radius: 40rpx;
+    box-sizing: border-box;
+    background: #fff;
+    margin: 10rpx;
+    font-size: 14px;
+    color: #222;
+}
+.active{
+    background: #26a2ff;
+    color: #fff;
+}
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+}
+
+
+.tab-content{
+    overflow: hidden;
+}
+.tab-con-list{
+    width: 50%;
+    height: auto;
+    padding: 0 12rpx;
+    box-sizing: border-box;
+    float: left;
+}
+
+.tab-con-list .img{
+    width: 100%;
+    height: 350rpx;
+}
+.imgsrc{
+    width: 100%;
+    height: 350rpx;
+}
+.tab-con-list .info{
+    overflow: hidden;
+}
+.tab-con-list .info-left{
+    float: left;
+    width: 270rpx;
+    height: 80rpx;
+    font-size: 14px;
+    color: #333;
+}
+.tab-con-list .info-left .price{
+    color: red;
+}
+.tab-con-list .info-right{
+    float: left;
+    width: 80rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+}
+.shopCart{
+    width: 40rpx;
+    height: 40rpx;
+}

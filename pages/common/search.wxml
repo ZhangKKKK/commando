@@ -1,0 +1,3 @@
+<template name="search">
+    <view class='search'><input placeholder='搜索商品' bindfocus='goSearch'></input></view>
+</template>
